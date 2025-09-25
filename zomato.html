@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swiggy Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fc8019; /* Swiggy orange-ish */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #fc8019;
+    }
+
+    .hero {
+      background: url('https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_1340/Breakfast1-new_q6cje7') no-repeat center center / cover;
+      height: 300px;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    .restaurants {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .card-body h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+    .card-body p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #333;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SwiggyClone</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div>
+        <h1>Craving Something?</h1>
+        <p>Order your favorite food from trusted restaurants</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="restaurants">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Restaurant+1" alt="Restaurant 1">
+      <div class="card-body">
+        <h3>Restaurant One</h3>
+        <p>North Indian • ₹500 for two</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Restaurant+2" alt="Restaurant 2">
+      <div class="card-body">
+        <h3>Restaurant Two</h3>
+        <p>South Indian • ₹300 for two</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Restaurant+3" alt="Restaurant 3">
+      <div class="card-body">
+        <h3>Restaurant Three</h3>
+        <p>Chinese • ₹400 for two</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Restaurant+4" alt="Restaurant 4">
+      <div class="card-body">
+        <h3>Restaurant Four</h3>
+        <p>Fast Food • ₹350 for two</p>
+      </div>
+    </div>
+
+    <!-- Add more cards similarly -->
+  </section>
+
+  <footer>
+    &copy; 2025 SwiggyClone. All rights reserved.
+  </footer>
+
+</body>
+</html>
